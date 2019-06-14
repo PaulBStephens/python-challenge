@@ -1,17 +1,19 @@
 
+
 import csv 
 
+total_months = 0
 
-
-with open("BeatlesSimpleCSVfile.csv") as csvfile:
+with open("budget_data") as csvfile:
     read_csv = csv.reader(csvfile, delimiter=",")
     if csv.Sniffer().has_header:
         next(read_csv)
     for row in read_csv:
-        count_members += 1
+        total_months += 1
         
-count_members
-print(f"The number of band members is {count_members}")
+total_months
+
+print(f"The number included in the dataset is {total_months}")
 
 
 
